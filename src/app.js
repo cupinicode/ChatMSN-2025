@@ -40,7 +40,7 @@ io.on('connection', (socket) => { //socket es un onjeto que representa la conexi
     messages.push(dataMessage); //Agregamos el mensaje a la lista de mensajes
     //ocket.emit('response', 'Message received!'); //Enviamos una respuesta al cliente que envió el mensaje sólamente
     //socket.broadcast.emit('message', dataMessage); //Enviamos el mensaje a todos los clientes conectados, excepto al que lo envió
-    io.emit('Broadcast new message', dataMessage); //Enviamos el ARRAY de mensajes a todos los clientes conectados, incluyendo al que lo envió
+    io.emit('Broadcast new message', dataMessage); //Enviamos el  mensaje a todos los clientes conectados, incluyendo al que lo envió
   });
 
   socket.on('disconnect', () => {
